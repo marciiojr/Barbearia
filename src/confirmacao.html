@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia - Agendamentos</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <link rel="shortcut icon" href="2df1c7f5079ed2cda256a626576a6257-logotipo-do-bigode-no-guiador.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/index.html">INICIO</a>
+            <a href="agendamentos.html">AGENDAMENTOS</a>
+            <a href="planos.html">PLANOS</a>
+        </nav>
+    </header>
+
+    <main class="confirmacao--agendamento">
+        <fieldset>
+            <legend>Detalhes do Agendamento</legend>
+            <label>
+                    <h2></h2>
+                    <p><strong>Nome:</strong> <span id="nome"></span></p>
+                    <p><strong>Telefone:</strong> <span id="telefone"></span></p>
+                    <p><strong>Serviço:</strong> <span id="servico"></span></p>
+                    <p><strong>Data:</strong> <span id="data"></span></p>
+                    <p><strong>Hora:</strong> <span id="hora"></span></p>
+            </label>
+        </fieldset>
+    </main>
+    <script>
+        // Recuperar os dados do localStorage
+        const agendamento = JSON.parse(localStorage.getItem("agendamento"));
+        if (agendamento) {
+            document.getElementById("nome").textContent = agendamento.name;
+            document.getElementById("telefone").textContent = agendamento.phone;
+            document.getElementById("servico").textContent = agendamento.service;
+            document.getElementById("data").textContent = agendamento.date;
+            document.getElementById("hora").textContent = agendamento.time;
+
+            localStorage.setItem("agendamento", JSON.stringify({
+            name,
+            phone,
+            service,
+            date,
+            time
+        }));
+
+        // Redirecionar para a nova página
+        window.location.href = "confirmacao.html"; // Altere o nome do arquivo conforme necessário
+
+            // Remover os dados do localStorage (opcional)
+            localStorage.removeItem("agendamento");
+        } else {
+            // Se não houver agendamento, redirecionar de volta
+            window.location.href = "index.html"; // Altere conforme necessário
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+O construtor a seguir, quando inserido na classe BasePlusCommissionEmployee, deve invocar um construtor CommissionEmployee para inicializar a parte CommissionEmployee de um objeto BasePlusCommissionEmployee.
+
+//construtor
+public BasePlusCommisionEmployee( String first,String last,
+    String ssn, double sales, double rate, double salary )
+    {
+        super( first, last, ssn, sales );
+        setBaseSalary( salary );
+    }
+
+Identifique no campo de resposta curta abaixo a linha (em numeral) onde ocorre um erro de compilação e o nome do parâmetro ausente para o construtor CommissionEmployee.
